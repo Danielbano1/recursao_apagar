@@ -27,7 +27,7 @@ def listar_pdfs(arquivo_7z):
 
 def salvar_csv(nomes, nome_csv):
     caminho_extracao = "documents/temps"
-    # 🔥 Apagar a pasta temporária depois do uso
+    # Apagar a pasta temporária depois do uso
     if os.path.exists(caminho_extracao):
         shutil.rmtree(caminho_extracao)
     with open(nome_csv, mode='w', newline='', encoding='utf-8') as arquivo_csv:
@@ -37,7 +37,7 @@ def salvar_csv(nomes, nome_csv):
             escritor.writerow([nome])
 
 # Exemplo de uso
-arquivo_7z = "documents/seven&sevenZip.7z"
+arquivo_7z = "D:/Tecgraf/Sindotec/Documentos_P-75.7z"
 nome_csv = "nomes_arquivos.csv"
 
 pdfs_encontrados = listar_pdfs(arquivo_7z)
